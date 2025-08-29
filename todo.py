@@ -8,19 +8,19 @@ def add_task(task):
     tasks.append(task)
 
 # Step 3: View tasks
-def display_tasks(task):
-    for i, task in enumerate(tasks, start = 1)
-    print(f"{i}.{task}")
+def view_tasks():
+    for i, task in enumerate(tasks, start = 1):
+        print(f"{i}.{task}")
 
 # Step 4: Delete a task
 def delete_task(task):
     tasks.pop(task)
 
-
 # Step 5: Mark task complete
-mark_complete = 0
-if task==complete:
-    mark_complete=mark_complete + 1
+def mark_complete(index):
+    if 0 <= index < len(tasks):
+        tasks[index] = tasks[index] + "✅"
+        #print(str(task) + "is complete")
 
 # Step 6: Save/load tasks (extra stretch for today)
 
@@ -32,4 +32,6 @@ if __name__ == "__main__":
     view_tasks()
     mark_complete(0)
     view_tasks()
-    save_tasks()
+    delete_task(0)
+    view_tasks()
+    
